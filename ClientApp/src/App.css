@@ -1,0 +1,19 @@
+
+.sidebar{
+    height: 92.5vh;
+    padding-right: 0;
+}
+
+.main-content{
+    background-color: white;
+    height: 92.5vh;
+}
+
+h1{
+    padding: 0.5rem;
+}
+
+p{
+    padding: 0.5rem;
+    padding-right: 20px;
+}

@@ -1,0 +1,97 @@
+
+.radio-container{
+    width: 25%;
+    height: 310px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.radio-container .label-radio,
+.radio-container input {
+    display: block;
+    
+}
+
+.radio-container input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+  }
+
+  .radio-container .label-radio {
+    cursor: pointer;
+    z-index: 90;
+    width: 100%;
+  }
+  .label-radio:hover {
+    border: 2px solid gray;
+
+  }
+
+.radio-option-container {
+    width:32%;
+    height: 120px;
+    background-color: #F5F5F5;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.label-radio{
+    font-size: 14px;
+    font-family: "Segoe UI";
+    border: 2px solid transparent;
+    text-align:center;
+    transition: 0.2s;
+}
+
+input:checked + .label-radio {
+  border: 2px solid rgb(0, 120, 212);
+}
+
+/* Hole Punch CSS */
+
+.hole-punch-container{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.ugly-hole-punch{
+    background-color:transparent; /*its there but appears transparent*/
+    border-radius: 50%;
+    border: 1px solid transparent;
+    width: 20px;
+    height: 20px;
+    margin:5px;
+    position: relative;
+}
+.label-radio:hover .ugly-hole-punch{
+    border: 2px solid gray;
+    background-color: white;
+}
+input:checked + .label-radio:hover .ugly-hole-punch{
+    background-color: white;
+    border: 2px solid rgb(0, 120, 212);
+}
+
+input:checked + label > div > div {
+    border: 2px solid rgb(0, 120, 212);
+    background-color: white;
+}
+
+.innermost-circle{
+    background-color: transparent;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+input:checked + label > div > div > div {
+    background-color: rgb(0, 120, 212);
+}

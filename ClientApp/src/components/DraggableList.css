@@ -1,0 +1,19 @@
+
+
+.myList{
+    list-style: none;
+    padding: 5px;
+    /* border: 1px solid black; */
+}
+.myList > li{
+    /* list-style: none; */
+    padding: 5px;
+    border: 1px solid black;
+    width: 30%;
+}
+
+/* li{
+    border: 1px solid black;
+    margin-top: 1px;
+    padding: 5px;
+} */

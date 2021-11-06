@@ -1,0 +1,17 @@
+
+:root{
+    --bg: #d3d3d3;
+    --bg-accent: #484a4d;
+    --text-color: black;
+    --nav-size: 60px;
+    --border: 1px solid #474a4d;
+    --border-radius: 8px;
+    --speed: 500ms;
+}
+*{
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
