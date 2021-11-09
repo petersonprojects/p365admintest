@@ -181,7 +181,8 @@ ClientBin/
 orleans.codegen.cs
 
 ClientApp/node_modules
-
+.vscode/launch.json
+.vscode/tasks.json
 # RIA/Silverlight projects
 Generated_Code/
 
