@@ -3,6 +3,7 @@ import Slider from 'react-rangeslider';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // To include the default styles
+import styled from "styled-components";
 import './RangeSlider.css';
  
 const RangeSlider = (props) => {
@@ -17,7 +18,7 @@ const RangeSlider = (props) => {
     return (
         <>
         <Row>      
-        <Col xs={10} className="sliderslider">
+        <Col xs={10}>
             <Slider
             value={volume}
             min={0}
@@ -27,7 +28,8 @@ const RangeSlider = (props) => {
         />
         </Col>
         <Col xs={2} className="center">
-            {volume}
+            {/* {volume} */}
+            {props.color}
         </Col>
 
         </Row>

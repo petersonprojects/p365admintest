@@ -1,44 +1,61 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import './DraggableList.css';
 
 import styled from 'styled-components';
 import { 
   ArrowBidirectionalUpDown24Regular,
- 
+
 } 
 from "@fluentui/react-icons";
 
-const iconStyleProps: IFluentIconsProps = {
-    primaryFill: "blue",
-};
-
-let array = [
-    {
-        id: '1',
-        title: 'Curb Your Enthusiasm',
-        thumb: '/path/to/icon'
-    },
-    {
-        id: '2',
-        title: 'Eddie Izzard',
-        thumb: '/path/to/icon'
-    },
-    {
-        id: '3',
-        title: 'Bill & Teds Excellent Adventure',
-        thumb: '/path/to/icon'
-    },
-    {
-        id: '4',
-        title: 'Potato Skins',
-        thumb: '/path/to/icon'
-    }
-];
-
-
 
 const DraggableList = (props) => {
+
+    const [accentColor, setAccent] = useState(null);
+
+    useEffect(()=> {
+  
+      function getTheme () {
+        fetch(`https://p365services.azurewebsites.net/api/Utilities?code=nwlK1wYTsoGio4nFizR5NjSNHDEsEAlhCFM/j2SjYWWT/4aK1EOqlg==&tenantId=7D6B2DFC-2750-4470-AFD2-6DC13C3F0DD0&siteCollectionId=ACFD1DBB-B31F-459D-B278-61DFB8979CE6&siteId=5FF5AE6F-2886-4277-B0BF-B4872F3D4440&utilityType=siteTheme`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setAccent(data.AccentColor);
+        })
+        .catch(err => console.log(err))
+      }
+  
+      getTheme();
+  
+    }, [])
+
+    const iconStyleProps: IFluentIconsProps = {
+        primaryFill: accentColor,
+    };
+    
+    let array = [
+        {
+            id: '1',
+            title: 'Curb Your Enthusiasm',
+            thumb: '/path/to/icon'
+        },
+        {
+            id: '2',
+            title: 'Eddie Izzard',
+            thumb: '/path/to/icon'
+        },
+        {
+            id: '3',
+            title: 'Bill & Teds Excellent Adventure',
+            thumb: '/path/to/icon'
+        },
+        {
+            id: '4',
+            title: 'Potato Skins',
+            thumb: '/path/to/icon'
+        }
+    ];
 
     const TaskList = styled.div`
         padding: 8px;

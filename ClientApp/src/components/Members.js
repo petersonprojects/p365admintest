@@ -1,13 +1,31 @@
-
+import {useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadTheme } from '../actions/loadTheme.js';
 // import Row from "react-bootstrap/Row";
 import "./Members.css";
 const  Members = () => {
+
+    const reduxState = useSelector(state => state.accentColor);
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+
+        async function getTheme() {
+
+            dispatch(loadTheme());
+
+        }
+
+        getTheme();
+
+    }, [])
+
     return (
         <>
             <h1>Members</h1>
 
             <p>Prefect’s bathroom Trelawney veela squashy armchairs, SPEW: Gamp’s Elemental Law of Transfiguration. Magic Nagini bezoar, Hippogriffs Headless Hunt giant squid petrified. Beuxbatons flying half-blood revision schedule, Great Hall aurors Minerva McGonagall Polyjuice Potion. Restricted section the Burrow Wronski Feint gnomes, quidditch robes detention, chocolate frogs. Errol parchment knickerbocker glory Avada Kedavra Shell Cottage beaded bag portrait vulture-hat. Twin cores, Aragog crimson gargoyles, Room of Requirement counter-clockwise Shrieking Shack. Snivellus second floor bathrooms vanishing cabinet Wizard Chess, are you a witch or not?</p>
-
+            {reduxState}
             <div className="radio-container" role="radiogroup">
 
                 <div className="radio-option-container">

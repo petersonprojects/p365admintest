@@ -9,8 +9,10 @@ import SettingsAdvanced from './components/SettingsAdvanced';
 import Admins from './components/Admins';
 import About from './components/About';
 import Signout from './components/Signout';
-// import { createStore, compose, applyMiddleware } from 'redux';
-// import { Provider } from 'react-redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import reduxThunk from 'redux-thunk';
+import reducer from './reducers/reducer.js';
+import { Provider } from 'react-redux';
 // import reducer from './reducers/reducer';
 import {
   BrowserRouter as Router,
@@ -49,18 +51,18 @@ import BaseLayout from './components/layout/BaseLayout';
 // const persistedState = loadFromLocalStore();
 
 
-// let store = createStore(reducer, persistedState, compose(applyMiddleware(reduxThunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+let store = createStore(reducer,  compose(applyMiddleware(reduxThunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
 
-// // this happens every time theres an update to the local store
+// this happens every time theres an update to the local store
 // store.subscribe(()=>{
 
-//   saveToLocalStore(store.getState())
+//   store.getState();
 
 // })
 
 ReactDOM.render(
 
-  // <Provider store={store}>
+  <Provider store={store}>
     <Router>
       <BaseLayout>
         <Switch>
@@ -78,8 +80,8 @@ ReactDOM.render(
 
         </Switch>
       </BaseLayout>
-    </Router>,
-    // <Provider/>
+    </Router>
+    </Provider>,
 
   document.getElementById('root')
 

@@ -20,7 +20,20 @@ namespace P365_Admin_React
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(feature =>
+                feature.AddPolicy(
+                    "CorsPolicy",
+                    apiPolicy => apiPolicy
+                                    .AllowAnyOrigin()
+                                    .WithOrigins("http://localhost:5001")
+                                    .AllowAnyHeader()
+                                    .AllowAnyMethod()
+                                    .SetIsOriginAllowed(host => true)
+                                    .AllowCredentials()
+                                ));
 
+            services.AddMvc();
+            // services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddControllersWithViews();
 
             // In production, the React files will be served from this directory
@@ -33,6 +46,8 @@ namespace P365_Admin_React
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("CorsPolicy");   
+            // app.UseMvc();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
