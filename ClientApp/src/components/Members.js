@@ -1,12 +1,15 @@
 import {useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadTheme } from '../actions/loadTheme.js';
+import RadioOption from './RadioOption';
 // import Row from "react-bootstrap/Row";
 import "./Members.css";
 const  Members = () => {
 
     const reduxState = useSelector(state => state.accentColor);
     const dispatch = useDispatch();
+
+    const [color, setColor] = useState('transparent');
 
     useEffect(()=>{
 
@@ -20,6 +23,15 @@ const  Members = () => {
 
     }, [])
 
+    let handleMouseEnter = (e) => {
+
+        setColor(reduxState);
+    }
+    let handleMouseLeave = (e) => {
+
+        setColor('transparent');
+    }
+
     return (
         <>
             <h1>Members</h1>
@@ -28,13 +40,14 @@ const  Members = () => {
             {reduxState}
             <div className="radio-container" role="radiogroup">
 
+
                 <div className="radio-option-container">
                     <input style={{display:'none'}} type="radio" id="0" name="test1"/>
                     <label className="label-radio" for="0">
 
                         <div className="hole-punch-container" style={{height:'30px'}}>
                             <div className="ugly-hole-punch">
-                                <div className="innermost-circle"></div>
+                                <div className="innermost-circle" ></div>
                             </div>
                         </div>
 

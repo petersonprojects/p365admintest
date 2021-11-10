@@ -1,5 +1,5 @@
 const initialState = {
-    accentColor: 'blue'
+    accentColor: ''
 }
 
 const reducer = (state = initialState, action) => {
