@@ -25,7 +25,7 @@
     width: 100%;
   }
   .label-radio:hover {
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
 
   }
 
@@ -35,6 +35,16 @@
     background-color: #F5F5F5;
     margin: 2px;
     display: flex;
+    justify-content: center;
+
+}
+.radio-option-container2 {
+    width:32%;
+    height: 120px;
+    background-color: #F5F5F5;
+    margin: 2px;
+    display: flex;
+    border: 2px solid red;
     justify-content: center;
 
 }
@@ -49,7 +59,7 @@
 }
 
 input:checked + .label-radio {
-  border: 2px solid rgb(0, 120, 212);
+  /* border: 2px solid rgb(0, 120, 212); */
 }
 
 /* Hole Punch CSS */
@@ -79,7 +89,7 @@ input:checked + .label-radio:hover .ugly-hole-punch{
 
 input:checked + label > div > div {
     border: 2px solid rgb(0, 120, 212);
-    background-color: white;
+    /* background-color: white; */
 }
 
 .innermost-circle{

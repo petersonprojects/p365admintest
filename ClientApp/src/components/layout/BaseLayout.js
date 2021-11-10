@@ -15,6 +15,9 @@ import '../../index.css';
 // import {CSSTransition} from "react-transition-group";
 import Menu from '../../components/layout/Menu.js';
 import Header from './Header/Header.js';
+import {useEffect} from 'react';
+import {useDispatch} from 'react-redux';
+import { loadTheme } from '../../actions/loadTheme.js';
 // import {SettingsIcon} from "../../icons/Settings.js";
 // import Footer from './Footer';
 // const NavBar = (props) => {
@@ -190,7 +193,21 @@ import Header from './Header/Header.js';
 // }
 
 const BaseLayout = (props) => {
-    // const [open, setOpen] = useState(false);
+
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+
+        async function getTheme() {
+
+            dispatch(loadTheme());
+
+        }
+
+        getTheme();
+
+    }, [])
+
     return (
         <>
         <Header />
