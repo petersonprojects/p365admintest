@@ -1,10 +1,7 @@
-/**
-* Rangeslider
+/*
+Rangeslider
 */
-/* .testie{
-  background-color: red;
-  color:red;
-} */
+
 .rangeslider {
     margin: 20px 0;
     position: relative;
@@ -13,7 +10,7 @@
     touch-action: none;
   }
 .rangeslider:hover {
-    background-color:  rgb(0, 120, 212);
+    background-color:  var(--base);
   }
   .rangeslider,
   .rangeslider .rangeslider__fill {
@@ -29,12 +26,11 @@
     /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 -1px 3px rgba(0, 0, 0, 0.4); */
   }
   .rangeslider:hover .rangeslider__handle {
-    border: 1px solid rgb(0, 120, 212);
+    border: 1px solid var(--base);
 
-    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 -1px 3px rgba(0, 0, 0, 0.4); */
   }
   .rangeslider:hover .rangeslider__fill {
-    background-color: rgb(0, 120, 212);
+    background-color: var(--base);
 
     /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 -1px 3px rgba(0, 0, 0, 0.4); */
   }
@@ -47,13 +43,9 @@
     justify-content: center;
     padding-left:0px;
 }
-/* .sliderslider{
-    padding-right:5px;
-} */
-  .rangeslider:hover{
-      /* color:gray; */
-      background-color:rgb(222, 236, 249);
 
+  .rangeslider:hover{
+      background-color:rgb(222, 236, 249);
   }
   .rangeslider .rangeslider__handle-tooltip {
     width: 40px;
@@ -96,13 +88,11 @@
   }
   .rangeslider-horizontal .rangeslider__fill:hover {
     /* height: 100%; */
-    background-color: rgb(0, 120, 212);
+    background-color: var(--base);
     border-radius: 10px;
     top: 0;
   }
   .rangeslider-horizontal:hover {
-    /* height: 100%; */
-    /* background-color: lightblue; */
     border-radius: 10px;
     top: 0;
   }
@@ -115,7 +105,7 @@
     transform: translate3d(-50%, -50%, 0);
   }
   .rangeslider-horizontal .rangeslider__handle:hover {
-    border: 1px solid  rgb(0, 120, 212);
+    border: 1px solid  var(--base);
   }
   .rangeslider-horizontal .rangeslider__handle:after {
     content: ' ';
@@ -126,7 +116,6 @@
     left: 1px;
     border-radius: 50%;
     background-color: white;
-    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) inset, 0 -1px 3px rgba(0, 0, 0, 0.4) inset; */
   }
   .rangeslider-horizontal .rangeslider__handle-tooltip {
     top: -55px;
@@ -139,55 +128,8 @@
     bottom: -8px;
     transform: translate3d(-50%, 0, 0);
   }
-  /**
-  * Rangeslider - Vertical slider
-  */
-  .rangeslider-vertical {
-    margin: 20px auto;
-    height: 150px;
-    max-width: 10px;
-    background-color: transparent;
-  }
-  .rangeslider-vertical .rangeslider__fill,
-  .rangeslider-vertical .rangeslider__handle {
-    position: absolute;
-  }
-  .rangeslider-vertical .rangeslider__fill {
-    width: 100%;
-    background-color: #7cb342;
-    box-shadow: none;
-    bottom: 0;
-  }
-  .rangeslider-vertical .rangeslider__handle {
-    width: 30px;
-    height: 10px;
-    left: -10px;
-    box-shadow: none;
-  }
-  .rangeslider-vertical .rangeslider__handle-tooltip {
-    left: -100%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
-  }
-  .rangeslider-vertical .rangeslider__handle-tooltip:after {
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 8px solid rgba(0, 0, 0, 0.8);
-    left: 100%;
-    top: 12px;
-  }
-  /**
-  * Rangeslider - Reverse
-  */
-  .rangeslider-reverse.rangeslider-horizontal .rangeslider__fill {
-    right: 0;
-  }
-  .rangeslider-reverse.rangeslider-vertical .rangeslider__fill {
-    top: 0;
-    bottom: inherit;
-  }
-  /**
-  * Rangeslider - Labels
+  /*
+  Rangeslider - Labels
   */
   .rangeslider__labels {
     position: relative;

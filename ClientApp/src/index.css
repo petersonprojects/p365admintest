@@ -7,6 +7,7 @@
     --border: 1px solid #474a4d;
     --border-radius: 8px;
     --speed: 500ms;
+    --base: rgb(0, 120, 212);
 }
 *{
     font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
