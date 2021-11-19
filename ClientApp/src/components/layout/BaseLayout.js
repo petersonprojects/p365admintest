@@ -15,7 +15,7 @@ import '../../index.css';
 // import {CSSTransition} from "react-transition-group";
 import Menu from '../../components/layout/Menu.js';
 import Header from './Header/Header.js';
-import {React, useEffect} from 'react';
+import {React, useEffect, useState} from 'react';
 import {useDispatch} from 'react-redux';
 import { loadTheme } from '../../actions/loadTheme.js';
 import { useSelector } from 'react-redux';
@@ -25,20 +25,18 @@ const BaseLayout = (props) => {
     const reduxState = useSelector(state => state.accentColor);
     const dispatch = useDispatch();
 
+
     let changeTheme = async () => {
         document.documentElement.style.setProperty("--base",reduxState);
         console.log(`--base changed to ${reduxState}`);
-      }
+    }
 
 
     useEffect(()=>{
 
-        async function getTheme() {
-
+        function getTheme() {
             dispatch(loadTheme());
-
         }
-
         getTheme();
 
     }, [])
@@ -49,35 +47,28 @@ const BaseLayout = (props) => {
 
     }, [reduxState])
 
-
-
     return (
         <>
-        <Header />
-        <Container fluid style={{padding:'0'}}>
-            
-            <Row>
+            <Header />
+            <Container fluid style={{padding:'0'}}>
+                
+                <Row>
 
-                {/* Left Side Menu */}
-                <Col className="sidebar hidden-md" xs={2}>
-                    <Menu/>
-                </Col>
-
-
-                {/* Main Content */}
-                <Col className="main-content" xs={10}>
-                    {props.children}
-                </Col>
-
-            </Row>
-
-        </Container>
- 
-        {/* <Footer/> */}
+                    {/* Left Side Menu */}
+                    <Col className="sidebar hidden-md" xs={2}>
+                        <Menu/>
+                    </Col>
 
 
+                    {/* Main Content */}
+                    <Col className="main-content" xs={10}>
+                        {props.children}
+                    </Col>
+
+                </Row>
+
+            </Container>
         </>
-
     )
 }
 

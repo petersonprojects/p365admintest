@@ -24,7 +24,7 @@ const Header = () => {
                                 width="30"
                                 height="30"
                                 className="d-inline-block align-top"
-                            />{' '} P365 Admin
+                            />{' '} Discovery
                         </Navbar.Brand>
 
                         <Nav className="justify-content-end" activeKey="/">
