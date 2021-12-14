@@ -3,10 +3,11 @@ import Row from "react-bootstrap/Row";
 import DraggableList from './DraggableList.js';
 
 
-const  Projects = () => {
+const  OneDrive = () => {
     return (
       <>
-        <h1>Toggle Switch</h1>
+        Services > OneDrive
+        {/* <h1>Toggle Switch</h1>
 
         <Row style={{paddingLeft: '8px'}}>
           <b>Show title commands</b>
@@ -16,10 +17,10 @@ const  Projects = () => {
         <Row style={{paddingLeft: '8px'}}>
         
           <DraggableList/>
-        </Row>
+        </Row> */}
 
       </>
     );
   }
   
-export default Projects;
+export default OneDrive;

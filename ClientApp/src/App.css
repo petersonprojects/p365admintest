@@ -1,12 +1,16 @@
+body{
+    overflow-y: hidden;
+}
+
 
 .sidebar{
-    height: 92.5vh;
+    height: 100vh;
     padding-right: 0;
 }
 
 .main-content{
-    background-color: white;
-    height: 92.5vh;
+
+    height: 100vh;
 }
 
 h1{
@@ -14,6 +18,5 @@ h1{
 }
 
 p{
-    padding: 0.5rem;
     padding-right: 20px;
 }

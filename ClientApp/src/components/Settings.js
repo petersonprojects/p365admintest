@@ -50,10 +50,11 @@ const Settings = () => {
     }
 
     return (
-        <Container fluid>
-        <h1>Settings</h1>
+        
+            <>Settings
+            {/* <h1>Settings</h1>
 
-        <p>Boggarts lavender robes, Hermione Granger Fantastic Beasts and Where to Find Them. Bee in your bonnet Hand of Glory elder wand, spectacles House Cup Bertie Bott’s Every Flavor Beans Impedimenta. Stunning spells tap-dancing spider Slytherin’s Heir mewing kittens Remus Lupin. Palominos scarlet train black robes, Metamorphimagus Niffler dead easy second bedroom. Padma and Parvati Sorting Hat Minister of Magic blue turban remember my last.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         
         <Container fluid key={0} id="filter-0">
         <Row style={{paddingLeft:'8px'}}>
@@ -75,19 +76,19 @@ const Settings = () => {
                     <input placeholder="Enter search words"/>
                 </Row>
 
-                <Row style={{paddingLeft:'20px', width: '15%', marginTop:'0px',}}>
+                <Row style={{paddingLeft:'20px', width: '15%', marginTop:'0px', backgroundColor: '#e9e9e9'}}>
                     <button 
                         className="add-filter" 
-                        style={{textAlign:'left'}}
+                        style={{textAlign:'left', backgroundColor: '#e9e9e9'}}
                         onClick={handleAddFilter}
                     >
-                    <svg marginRight="0px" width="16" height="16" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.883 3.007 12 3a1 1 0 0 1 .993.883L13 4v7h7a1 1 0 0 1 .993.883L21 12a1 1 0 0 1-.883.993L20 13h-7v7a1 1 0 0 1-.883.993L12 21a1 1 0 0 1-.993-.883L11 20v-7H4a1 1 0 0 1-.993-.883L3 12a1 1 0 0 1 .883-.993L4 11h7V4a1 1 0 0 1 .883-.993L12 3l-.117.007Z" fill={reduxState}/></svg><span className="add-filter-text">Add Filter</span></button>
+                    <svg marginRight="0px" width="16" height="12" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.883 3.007 12 3a1 1 0 0 1 .993.883L13 4v7h7a1 1 0 0 1 .993.883L21 12a1 1 0 0 1-.883.993L20 13h-7v7a1 1 0 0 1-.883.993L12 21a1 1 0 0 1-.993-.883L11 20v-7H4a1 1 0 0 1-.993-.883L3 12a1 1 0 0 1 .883-.993L4 11h7V4a1 1 0 0 1 .883-.993L12 3l-.117.007Z" fill={'blue'}/></svg><span className="add-filter-text" style={{backgroundColor:'#e9e9e9'}}>Add Filter</span></button>
                 </Row>
 
                 </Container>
 
-                {handleAdditions()}
-        </Container>  
+                {handleAdditions()} */} 
+    </>
     );
 }   
 

@@ -6,14 +6,14 @@ import React, {useEffect, useState} from "react";
 import './Menu.css';
 
 // fluent icons
-import { 
-  Home24Regular,
-  PersonNote24Regular,
-  BookSearch24Regular,
-  ContactCardGroup24Regular,
-  Settings24Regular
-} 
-from "@fluentui/react-icons";
+// import { 
+//   Home24Regular,
+//   PersonNote24Regular,
+//   BookSearch24Regular,
+//   ContactCardGroup24Regular,
+//   Settings24Regular
+// } 
+// from "@fluentui/react-icons";
 
 import "react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css";
 
@@ -58,7 +58,7 @@ const Menu = (props) => {
   return (
     <React.Fragment>
       <div
-        className={`fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 ease-out transform translate-x-0 bg-white border-r-2 lg:translate-x-0 lg:static lg:inset-0`}
+        className={`segoe14pt fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 ease-out transform translate-x-0 border-r-2 lg:translate-x-0 lg:static lg:inset-0`}
       >
         {isFetched && navData.map((item) => {
 
@@ -83,6 +83,8 @@ const Menu = (props) => {
           }
 
             return(
+              <>
+              <div className="vertical-line"></div>
               <Navigation
                 key={item.id}
                 activeItemId={location.pathname}
@@ -99,50 +101,11 @@ const Menu = (props) => {
                 ]}
                 
               />
+              </>
             );
 
 
         }) /* end of map */}
-
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <Navigation
-          activeItemId={location.pathname}
-          onSelect={(obj) => {
-            history.push(obj.itemId)
-          }}
-          items={[
-            {
-              title: "Home",
-              itemId: "/",
-              // Optional
-              elemBefore: () => <Home24Regular/>
-            },
-            {
-              title: "About",
-              itemId: "/about",
-              elemBefore: () => <PersonNote24Regular />,
-              subNav: [
-                {
-                  title: "Projects",
-                  itemId: "/about/projects",
-                  // Optional
-                  elemBefore: () => <BookSearch24Regular/>
-                },
-                {
-                  title: "Members",
-                  itemId: "/about/members",
-                  elemBefore: () => <ContactCardGroup24Regular/>
-                }
-              ]
-            },
-
-          ]}
-        />
-
-
 
       </div> {/* end of wrapper div */}
     </React.Fragment>

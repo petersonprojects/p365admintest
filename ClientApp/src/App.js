@@ -4,8 +4,8 @@ import './index.css';
 import React, {useEffect, useState} from 'react';
 import RangeSlider from "./components/RangeSlider.js"
 import Row from "react-bootstrap/Row";
-const  Home = () => {
 
+const  Home = () => {
   // const [accentColor, setAccent] = useState(null);
 
   // useEffect(()=> {
@@ -31,11 +31,13 @@ const  Home = () => {
       <br/>
 
 
-<Row style={{paddingLeft:'8px'}}>
-            <b>Number of news posts to show</b>
-            <div style={{width:'30%'}}>
-              <RangeSlider/>
-            </div>
+            <Row style={{paddingLeft:'8px'}}>
+              <b>Number of news posts to show</b>
+
+              <div style={{width:'30%'}}>
+                <RangeSlider/>
+              </div>
+
             </Row>
 
 

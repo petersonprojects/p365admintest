@@ -52,16 +52,16 @@ const BaseLayout = (props) => {
             <Header />
             <Container fluid style={{padding:'0'}}>
                 
-                <Row>
+                <Row >
 
                     {/* Left Side Menu */}
-                    <Col className="sidebar hidden-md" xs={2}>
+                    <Col className="sidebar hidden-md" style={{backgroundColor: 'rgba(248,249,250)'}} xs={3}>
                         <Menu/>
                     </Col>
 
 
                     {/* Main Content */}
-                    <Col className="main-content" xs={10}>
+                    <Col className="main-content" style={{backgroundColor: '#e9e9e9'}} xs={9}>
                         {props.children}
                     </Col>
 

@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './App';
-import Projects from './components/Projects';
-import Product from './components/Product';
-import Members from './components/Members';
+// import Home from './App';
+import OneDrive from './components/OneDrive';
+import SharePoint from './components/SharePoint';
+import Exchange from './components/Exchange';
 import Settings from './components/Settings';
-import SettingsAdvanced from './components/SettingsAdvanced';
-import Admins from './components/Admins';
-import About from './components/About';
+import Teams from './components/Teams';
+import Compliance from './components/Compliance';
+import Services from './components/Services';
 import Signout from './components/Signout';
+import Labels from './components/Labels';
+import Reports from './components/Reports';
+import Setup from './components/Setup';
 import { createStore, compose, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
 import reducer from './reducers/reducer.js';
@@ -67,16 +70,24 @@ ReactDOM.render(
       <BaseLayout>
         <Switch>
 
-          <Route exact path='/' component={Home}/>
-          <Route exact path='/about' component={About}/>
-          <Route exact path='/about/projects' component={Projects}/>
-          <Route exact path='/about/members' component={Members}/>
-          <Route exact path='/about/product' component={Product}/>
-          <Route exact path='/settings' component={Settings}/>
-          <Route exact path='/settings/advanced' component={SettingsAdvanced}/>
-          <Route exact path='/settings/admins' component={Admins}/>
+          <Route exact path='/' component={Services}/>
+
+          <Route exact path='/Services' component={Services}/>
+          <Route exact path='/Services/SharePoint' component={SharePoint}/>
+          <Route exact path='/Services/OneDrive' component={OneDrive}/>
+          <Route exact path='/Services/Exchange' component={Exchange}/>
+          <Route exact path='/Services/Teams' component={Teams}/>
+
+          <Route exact path='/Compliance' component={Compliance}/>
+          <Route exact path='/Compliance/Labels' component={Labels}/>
+
+          <Route exact path='/Reports' component={Reports}/>
+          <Route exact path='/Settings' component={Settings}/>
+          <Route exact path='/Setup' component={Setup}/>
+
           <Route exact path='/signout' component={Signout}/>
-          <Route component={Home}/>
+
+          <Route component={Services}/>
 
         </Switch>
       </BaseLayout>
