@@ -5,6 +5,10 @@
     background-color: rgba(248,249,250);
 }
 
+body{
+    font-weight: 400;
+}
+
 /* .vertical-line{
     height: 20px;
     border-left: 6px solid green;
