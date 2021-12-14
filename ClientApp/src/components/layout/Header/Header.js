@@ -30,11 +30,11 @@ const Header = () => {
                         <Nav className="justify-content-end" activeKey="/">
 
                             <Nav.Item>
-                                <Link className="router-link" to="/">My Dashboard</Link>
+                                <Link className="router-link" to="/" style={{fontSize: '14px'}}>My Dashboard</Link>
                             </Nav.Item>
 
                             <Nav.Item>
-                                <Link className="router-link" to="/signout">Sign Out</Link>
+                                <Link className="router-link" to="/signout" style={{fontSize: '14px'}}>Sign Out</Link>
                             </Nav.Item>
 
                         </Nav>

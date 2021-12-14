@@ -83,8 +83,8 @@ const Menu = (props) => {
           }
 
             return(
+
               <>
-              <div className="vertical-line"></div>
               <Navigation
                 key={item.id}
                 activeItemId={location.pathname}
