@@ -1,6 +1,8 @@
 import {useState } from 'react';
 import { useSelector } from 'react-redux';
 import RadioOption from './RadioOption';
+import {Container, Card, Button} from "react-bootstrap";
+import './Services.css';
 
 // import Row from "react-bootstrap/Row";
 import "./Members.css";
@@ -28,7 +30,19 @@ const  Members = () => {
 
     return (
         <>
-            Services > Exchange
+            
+      <Container>
+        <div style={{padding:'5px',paddingBottom:'10px', paddingTop: '10px'}}>Services > Exchange</div>
+        <br></br>
+        <Card style={{width:'70%'}}>
+          <Card.Body>
+            <Card.Title className="heading">Exchange</Card.Title>
+            <Card.Text className="subheading">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Container>
             {/* <h1>Members</h1>
 
             <div className="radio-container" role="radiogroup">

@@ -13,9 +13,9 @@ const Header = () => {
     return (
 
             <Row>
-                <Navbar bg="light" variant="light">
+                <Navbar bg="light" variant="light" style={{backgroundColor:"#e9e9e9"}}>
 
-                    <Container fluid>
+                    <Container fluid style={{paddingLeft:'10px'}}>
 
                         <Navbar.Brand href="#home">
                             <img
